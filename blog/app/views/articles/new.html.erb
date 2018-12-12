@@ -1,0 +1,15 @@
+<h1>New article</h1>
+
+<%= form_for :article, url: articles_path do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :text %>
+		<%= f.text_area :text %>
+	</p>
+
+	<p><%= f.submit %></p>
+
+<% end %>
