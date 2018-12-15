@@ -1,0 +1,17 @@
+<h1>Edit article</h1>
+
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
