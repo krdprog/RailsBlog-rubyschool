@@ -1,6 +1,6 @@
 <% @articles.each do |article| %>
   <h3><%= article.title %></h3>
   <p><%= article.text %></p>
-  <p><%= link_to  "Show article", article_path(article) %> | <%= link_to  "Edit article", edit_article_path(article) %></p>
+  <p><%= link_to "Show article", article_path(article) %> | <%= link_to "Edit article", edit_article_path(article) %></p>
   <hr>
 <% end %>

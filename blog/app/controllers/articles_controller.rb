@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all  
+    @articles = Article.all
   end
 
 	def show
@@ -13,21 +13,21 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    if @article.valid? 
+    if @article.valid?
 			@article.save
 			redirect_to @article
     else
       render action: 'new'
     end
   end
-  
+
   def edit
 		@article = Article.find(params[:id])
   end
 
   def update
     @article = Article.find(params[:id])
-    
+
     if @article.update(article_params)
       redirect_to @article
     else
