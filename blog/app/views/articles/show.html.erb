@@ -2,6 +2,23 @@
 
 <p><%= @article.text %></p>
 
+
+<h3>Комментарии:</h3>
+
+<%= @message_without_comments %>
+
+<% @comments.each do |comment| %>
+
+<p><strong>Автор:</strong> <%= comment.author %></p>
+
+<p><%= comment.body %></p>
+
+<hr>
+
+<% end %>
+
+<h3>Добавить комментарий:</h3>
+
 <p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
@@ -18,3 +35,5 @@
 
 <% end %>
 </p>
+
+<p><%= link_to "Назад к списку статей", articles_path %></p>
