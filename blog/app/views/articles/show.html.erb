@@ -5,14 +5,12 @@
 
 <h3>Комментарии:</h3>
 
-<%= @message_without_comments %>
+<%= 'Без комментариев' if @article.comments.empty? %>
 
-<% @comments.each do |comment| %>
+<% @article.comments.each do |comment| %>
 
 <p><strong>Автор:</strong> <%= comment.author %></p>
-
 <p><%= comment.body %></p>
-
 <hr>
 
 <% end %>
