@@ -10,6 +10,6 @@ feature "Account Creation" do
     fill_in :user_password_confirmation, with: '1234567'
 
     click_button 'Sign up'
-    expect(page).to have_content 'Welcome!'
+    expect(page).to have_content I18n.t('devise.registrations.signed_up')
   end
 end
