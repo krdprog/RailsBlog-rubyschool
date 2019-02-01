@@ -17,4 +17,14 @@ describe Article do
 			expect(article.subject).to  eq 'Foo Bar'
 		end
 	end
+
+	describe "#last_comment" do
+		it "returns the last comment" do
+			# создаём статью с 3 комментариями
+			article = create(:article_with_comments)
+
+			# проверка
+			expect(article.last_comment.body).to eq "Comment body 3"
+		end
+	end
 end
