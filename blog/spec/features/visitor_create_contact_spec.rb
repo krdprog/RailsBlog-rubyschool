@@ -16,5 +16,4 @@ feature "Contact creation" do
     expect(page).to have_content 'Thanks!'
   end
 
-
 end
