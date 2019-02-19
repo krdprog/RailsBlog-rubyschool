@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-
   devise_for :users
-	root to: "home#index"
+  root to: "articles#index"
 
   get 'home/index'
 
@@ -10,6 +9,6 @@ Rails.application.routes.draw do
 
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
   resources :articles do
-  	resources :comments
+    resources :comments
   end
 end

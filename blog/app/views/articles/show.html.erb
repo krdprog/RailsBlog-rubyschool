@@ -2,7 +2,6 @@
 
 <p><%= @article.text %></p>
 
-
 <h3>Комментарии:</h3>
 
 <%= 'Без комментариев' if @article.comments.empty? %>
@@ -20,16 +19,16 @@
 <p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
-	<p>
-		<%= f.label :author %>
-		<%= f.text_field :author %>
-	</p>
-	<p>
-		<%= f.label :body %>
-		<%= f.text_area :body %>
-	</p>
+  <p>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
 
-	<p><%= f.submit %></p>
+  <p><%= f.submit %></p>
 
 <% end %>
 </p>
